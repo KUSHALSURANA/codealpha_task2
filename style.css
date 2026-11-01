@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #f7f5fb;
+    --navy: #25213d;
+    --purple: #7863c7;
+    --muted: #858198;
+    --white: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, #eee8ff 0, transparent 35%),
+        radial-gradient(circle at 90% 90%, #e9e5ff 0, transparent 35%),
+        var(--background);
+    color: var(--navy);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 18px;
+}
+
+.app {
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 35px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    border-radius: 16px;
+    background: #e8e1ff;
+    color: var(--purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    box-shadow: 0 5px 15px #7863c718;
+}
+
+.header h1 {
+    font-size: clamp(28px, 5vw, 36px);
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 9px;
+}
+
+.header p {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.2px;
+}
+
+.quote-card {
+    position: relative;
+    background: var(--white);
+    border: 1px solid #ece8f5;
+    border-radius: 25px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 20px 55px rgba(49, 36, 89, 0.08);
+    overflow: hidden;
+}
+
+.quote-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #a18bfa, #7863c7, #c0b1ff);
+}
+
+.quote-icon {
+    font-family: 'Playfair Display', serif;
+    color: #d9d0ff;
+    font-size: 88px;
+    line-height: 0.9;
+    height: 73px;
+}
+
+.quote-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--purple);
+    margin: 15px 0 23px;
+}
+
+blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(23px, 4vw, 30px);
+    line-height: 1.55;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 25px;
+    transition: opacity 0.2s ease;
+}
+
+.line {
+    width: 42px;
+    height: 3px;
+    background: #d8ceff;
+    border-radius: 10px;
+    margin: 0 auto 18px;
+}
+
+.author {
+    font-size: 14px;
+    font-weight: 600;
+    color: #7863c7;
+    margin-bottom: 30px;
+}
+
+button {
+    width: 100%;
+    max-width: 250px;
+    border: none;
+    border-radius: 14px;
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #8872d9, #6d57b8);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 18px #7863c735;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button span {
+    font-size: 19px;
+    margin-right: 8px;
+    vertical-align: -1px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px #7863c740;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:focus-visible {
+    outline: 3px solid #b7a7ff;
+    outline-offset: 4px;
+}
+
+.hint {
+    color: #a09aaf;
+    font-size: 11px;
+    margin-top: 22px;
+}
+
+footer {
+    margin-top: 35px;
+}
+
+.footer-star {
+    display: block;
+    color: #a18bfa;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #858198;
+}
+
+footer strong {
+    color: #514675;
+    font-weight: 700;
+}
+
+.footer-caption {
+    display: block;
+    margin-top: 12px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #aaa5b8;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 24px 16px;
+    }
+
+    .header {
+        margin-bottom: 27px;
+    }
+
+    .quote-card {
+        padding: 30px 21px 25px;
+        border-radius: 22px;
+    }
+
+    blockquote {
+        line-height: 1.5;
+    }
+
+    footer {
+        margin-top: 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
